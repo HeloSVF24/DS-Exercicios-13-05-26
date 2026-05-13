@@ -20,3 +20,22 @@
 <img width="1366" height="720" alt="Pitagoras5" src="https://github.com/user-attachments/assets/9adab6c2-2029-4448-bd3e-9c2b9e6b9bd8" />
 <h2>Quatro notas</h2>
 <img width="1366" height="720" alt="Notas1" src="https://github.com/user-attachments/assets/97436d68-be93-4735-97bd-774758e1077c" />
+<img width="1366" height="720" alt="Notas2" src="https://github.com/user-attachments/assets/ef1c1307-4013-46d7-baec-2e50e177c3a9" />
+<img width="1366" height="720" alt="Notas3" src="https://github.com/user-attachments/assets/a741f577-f3a2-471f-9334-d6b8f6d96bf9" />
+<img width="1366" height="720" alt="Notas4" src="https://github.com/user-attachments/assets/4327b236-3968-42a9-9aa7-2df719ff8e66" />
+<img width="1366" height="720" alt="Notas5" src="https://github.com/user-attachments/assets/71274a49-5daf-4d02-b11e-4b70f055b5dd" />
+<img width="1366" height="720" alt="Notas6" src="https://github.com/user-attachments/assets/e6f2267d-edc8-4e59-ac4d-6924a6accc15" />
+<h2>Temperaturas</h2>
+<img width="1366" height="720" alt="Temperatura1" src="https://github.com/user-attachments/assets/990b914c-afa0-4a18-8ab8-c8fd2a30eea4" />
+<img width="1366" height="720" alt="Temperatura2" src="https://github.com/user-attachments/assets/398b8651-882c-45d8-af18-5d8268493005" />
+<img width="1366" height="720" alt="Temperatura3" src="https://github.com/user-attachments/assets/6f45adf8-40b2-48c1-9a3a-bd03024d671e" />
+<img width="1366" height="720" alt="Temperatura4" src="https://github.com/user-attachments/assets/fb88701a-9375-4d06-b711-1e5fa2be7d3a" />
+<img width="1366" height="720" alt="Temperatura5" src="https://github.com/user-attachments/assets/73dc3af6-247b-4c07-b89a-27fc5cae34e7" />
+<img width="1366" height="720" alt="Temperatura6" src="https://github.com/user-attachments/assets/2c2452c3-d7c9-4cca-9358-ca08de48a3b5" />
+<h2>Triângulo</h2>
+<img width="1366" height="720" alt="Triangulo1" src="https://github.com/user-attachments/assets/0ef1e6db-dd93-4983-ad78-ef6134c1b51d" />
+<img width="1366" height="720" alt="Triangulo2" src="https://github.com/user-attachments/assets/c979355c-f6f2-4af7-aed7-dcdaa149f010" />
+<img width="1366" height="720" alt="Triangulo3" src="https://github.com/user-attachments/assets/9082db68-6ba4-43b4-8a04-aae50e2c39dd" />
+<img width="1366" height="720" alt="Triangulo4" src="https://github.com/user-attachments/assets/36d6980c-47c5-4dcb-a376-7f7a2fabcb61" />
+<img width="1366" height="720" alt="Trianguulo5" src="https://github.com/user-attachments/assets/0119010d-20d6-4dd3-80dc-ef1b1ab3de98" />
+<img width="1366" height="720" alt="Triangulo6" src="https://github.com/user-attachments/assets/e94e48b0-2783-4558-bc5c-0f517669ba68" />
