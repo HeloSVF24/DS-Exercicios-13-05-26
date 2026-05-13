@@ -1,0 +1,115 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.principal3;
+
+/**
+ *
+ * @author Heloisa Silva 2 DS/AMS
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class Triangulos extends JFrame {
+
+    JLabel rotulo1, rotulo2, rotulo3, exibir;
+    JTextField texto1, texto2, texto3;
+    JButton verificar;
+
+    public Triangulos() {
+        super("Tipo de Triângulo");
+
+        Container tela = getContentPane();
+        setLayout(null);
+
+        // Labels
+        rotulo1 = new JLabel("Lado 1:");
+        rotulo2 = new JLabel("Lado 2:");
+        rotulo3 = new JLabel("Lado 3:");
+        exibir = new JLabel("");
+
+        // Campos de texto
+        texto1 = new JTextField(5);
+        texto2 = new JTextField(5);
+        texto3 = new JTextField(5);
+
+        // Botão
+        verificar = new JButton("Verificar Tipo");
+
+        // Cores
+        rotulo1.setForeground(Color.WHITE);
+        rotulo2.setForeground(Color.WHITE);
+        rotulo3.setForeground(Color.WHITE);
+        exibir.setForeground(Color.WHITE);
+
+        verificar.setForeground(Color.PINK);
+        verificar.setBackground(Color.WHITE);
+
+        tela.setBackground(Color.PINK);
+
+        // Posicionamento
+        rotulo1.setBounds(50, 20, 100, 20);
+        texto1.setBounds(150, 20, 150, 20);
+
+        rotulo2.setBounds(50, 60, 100, 20);
+        texto2.setBounds(150, 60, 150, 20);
+
+        rotulo3.setBounds(50, 100, 100, 20);
+        texto3.setBounds(150, 100, 150, 20);
+
+        verificar.setBounds(50, 140, 250, 25);
+        exibir.setBounds(50, 180, 300, 20);
+
+        // Evento do botão
+        verificar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    double a = Double.parseDouble(texto1.getText());
+                    double b = Double.parseDouble(texto2.getText());
+                    double c = Double.parseDouble(texto3.getText());
+
+                    if (a <= 0 || b <= 0 || c <= 0) {
+                        exibir.setText("Todos os lados devem ser positivos!");
+                    } else if (a + b <= c || a + c <= b || b + c <= a) {
+                        exibir.setText("Não forma um triângulo!");
+                    } else if (a == b && b == c) {
+                        exibir.setText("Triângulo Equilátero");
+                    } else if (a == b || a == c || b == c) {
+                        exibir.setText("Triângulo Isósceles");
+                    } else {
+                        exibir.setText("Triângulo Escaleno");
+                    }
+
+                    exibir.setVisible(true);
+                } catch (NumberFormatException ex) {
+                    exibir.setText("Digite apenas números válidos!");
+                    exibir.setVisible(true);
+                }
+            }
+        });
+
+        exibir.setVisible(false);
+
+        // Adicionando componentes
+        tela.add(rotulo1);
+        tela.add(texto1);
+        tela.add(rotulo2);
+        tela.add(texto2);
+        tela.add(rotulo3);
+        tela.add(texto3);
+        tela.add(verificar);
+        tela.add(exibir);
+
+        // Configurações da janela
+        setSize(400, 250);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        Triangulos app = new Triangulos();
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}

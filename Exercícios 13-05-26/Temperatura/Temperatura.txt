@@ -1,0 +1,111 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.principal5;
+
+/**
+ *
+ * @author Heloisa Silva 2 DS/AMS
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class Temperatura extends JFrame {
+
+    JLabel rotuloCelsius, rotuloFahrenheit, rotuloKelvin;
+    JTextField campoCelsius, campoFahrenheit, campoKelvin;
+    JButton converter;
+
+    public Temperatura() {
+        super("Conversor de Temperatura");
+
+        Container tela = getContentPane();
+        setLayout(null);
+
+        // Labels
+        rotuloCelsius = new JLabel("Graus Celsius:");
+        rotuloFahrenheit = new JLabel("Graus Fahrenheit:");
+        rotuloKelvin = new JLabel("Graus Kelvin:");
+
+        // Campos de texto
+        campoCelsius = new JTextField(5);
+        campoFahrenheit = new JTextField(5);
+        campoKelvin = new JTextField(5);
+
+        // Tornar campos de saída não editáveis
+        campoFahrenheit.setEditable(false);
+        campoKelvin.setEditable(false);
+
+        // Botão
+        converter = new JButton("Converte");
+
+        // Cores
+        rotuloCelsius.setForeground(Color.WHITE);
+        rotuloFahrenheit.setForeground(Color.WHITE);
+        rotuloKelvin.setForeground(Color.WHITE);
+
+        campoCelsius.setForeground(Color.BLACK);
+        campoFahrenheit.setForeground(Color.BLACK);
+        campoKelvin.setForeground(Color.BLACK);
+
+        converter.setForeground(Color.PINK);
+        converter.setBackground(Color.WHITE);
+
+        tela.setBackground(Color.PINK);
+
+        // Posicionamento (estilo calculadora)
+        rotuloCelsius.setBounds(50, 20, 120, 20);
+        campoCelsius.setBounds(180, 20, 120, 20);
+
+        rotuloFahrenheit.setBounds(50, 60, 120, 20);
+        campoFahrenheit.setBounds(180, 60, 120, 20);
+
+        rotuloKelvin.setBounds(50, 100, 120, 20);
+        campoKelvin.setBounds(180, 100, 120, 20);
+
+        converter.setBounds(100, 140, 150, 25);
+
+        // Evento do botão
+        converter.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    // Substitui vírgula por ponto
+                    String celsiusStr = campoCelsius.getText().replace(',', '.');
+                    double celsius = Double.parseDouble(celsiusStr);
+
+                    double fahrenheit = (celsius * 9 / 5) + 32;
+                    double kelvin = celsius + 273.15;
+
+                    campoFahrenheit.setText(String.format("%.2f", fahrenheit));
+                    campoKelvin.setText(String.format("%.2f", kelvin));
+
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Digite apenas números válidos!");
+                }
+            }
+        });
+
+        // Adicionando componentes
+        tela.add(rotuloCelsius);
+        tela.add(campoCelsius);
+        tela.add(rotuloFahrenheit);
+        tela.add(campoFahrenheit);
+        tela.add(rotuloKelvin);
+        tela.add(campoKelvin);
+        tela.add(converter);
+
+        // Configurações da janela
+        setSize(350, 220);
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public static void main(String[] args) {
+        new Temperatura();
+    }
+}

@@ -1,0 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.principal4;
+
+/**
+ *
+ * @author Heloisa Silva 2 DS/AMS
+ */
+public class Principal4 {
+
+    public static void main(String[] args) {
+        IMC tela = new IMC();
+        tela.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+    }
+}

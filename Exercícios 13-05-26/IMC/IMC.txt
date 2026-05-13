@@ -1,0 +1,108 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.principal4;
+
+/**
+ *
+ * @author Heloisa Silva 2 DS/AMS
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class IMC extends JFrame {
+
+    JLabel rotuloPeso, rotuloAltura, exibir;
+    JTextField campoPeso, campoAltura;
+    JButton calcular;
+
+    public IMC() {
+        super("Calculadora de IMC");
+
+        Container tela = getContentPane();
+        setLayout(null);
+
+        // Labels
+        rotuloPeso = new JLabel("Peso (kg):");
+        rotuloAltura = new JLabel("Altura (m):");
+        exibir = new JLabel("");
+
+        // Campos de texto
+        campoPeso = new JTextField(5);
+        campoAltura = new JTextField(5);
+
+        // Botão
+        calcular = new JButton("Calcular IMC");
+
+        // Cores
+        rotuloPeso.setForeground(Color.WHITE);
+        rotuloAltura.setForeground(Color.WHITE);
+        exibir.setForeground(Color.WHITE);
+
+        calcular.setForeground(Color.PINK);
+        calcular.setBackground(Color.WHITE);
+
+        tela.setBackground(Color.PINK);
+
+        // Posicionamento
+        rotuloPeso.setBounds(50, 20, 100, 20);
+        campoPeso.setBounds(150, 20, 150, 20);
+
+        rotuloAltura.setBounds(50, 60, 100, 20);
+        campoAltura.setBounds(150, 60, 150, 20);
+
+        calcular.setBounds(50, 100, 250, 25);
+        exibir.setBounds(50, 140, 300, 25);
+
+        // Evento do botão
+        calcular.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    // Substitui vírgula por ponto
+                    String pesoStr = campoPeso.getText().replace(',', '.');
+                    String alturaStr = campoAltura.getText().replace(',', '.');
+
+                    double peso = Double.parseDouble(pesoStr);
+                    double altura = Double.parseDouble(alturaStr);
+
+                    double imc = peso / (altura * altura);
+
+                    if (imc < 18.5) {
+                        exibir.setText("Abaixo do peso | IMC = " + String.format("%.2f", imc));
+                    } else if (imc < 25) {
+                        exibir.setText("Peso ideal | IMC = " + String.format("%.2f", imc));
+                    } else {
+                        exibir.setText("Acima do peso | IMC = " + String.format("%.2f", imc));
+                    }
+
+                    exibir.setVisible(true);
+                } catch (NumberFormatException ex) {
+                    exibir.setText("Digite apenas números válidos!");
+                    exibir.setVisible(true);
+                }
+            }
+        });
+
+        exibir.setVisible(false);
+
+        // Adicionando componentes
+        tela.add(rotuloPeso);
+        tela.add(campoPeso);
+        tela.add(rotuloAltura);
+        tela.add(campoAltura);
+        tela.add(calcular);
+        tela.add(exibir);
+
+        // Configurações da janela
+        setSize(400, 220);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        IMC app = new IMC();
+        app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}

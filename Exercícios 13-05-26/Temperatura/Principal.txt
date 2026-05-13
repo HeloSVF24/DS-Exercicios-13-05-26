@@ -1,0 +1,17 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.principal5;
+
+/**
+ *
+ * @author Heloisa Silva 2 DS/AMS
+ */
+public class Principal5 {
+
+    public static void main(String[] args) {
+        Temperatura tela = new Temperatura();
+        tela.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+    }
+}
